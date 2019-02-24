@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"ion/soong/android"
+	"DarkMagic/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -117,8 +117,8 @@ type variableProperties struct {
 			Srcs         []string
 		}
 
-		// include ion variables
-		Ion android.Product_variables
+		// include DarkMagic variables
+		DarkMagic android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -236,8 +236,8 @@ type productVariables struct {
 
 	VendorVars map[string]map[string]string `json:",omitempty"`
 
-	// include Ion variables
-	Ion android.ProductVariables
+	// include DarkMagic variables
+	DarkMagic android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {

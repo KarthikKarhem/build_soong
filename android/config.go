@@ -28,7 +28,7 @@ import (
 	"github.com/google/blueprint/bootstrap"
 	"github.com/google/blueprint/proptools"
 
-	"ion/soong/android"
+	"DarkMagic/soong/android"
 )
 
 var Bool = proptools.Bool
@@ -471,11 +471,11 @@ func (c *config) ResourceOverlays() []string {
 }
 
 func (c *config) JavaSourceOverlays() string {
-	return String(c.productVariables.Ion.Java_Source_Overlays)
+	return String(c.productVariables.DarkMagic.Java_Source_Overlays)
 }
 
 func (c *config) JavaSourceOverlayModuleWhitelist() []string {
-	return android.IonConfig.JavaSourceOverlayModuleWhitelist
+	return android.DarkMagicConfig.JavaSourceOverlayModuleWhitelist
 }
 
 func (c *config) PlatformVersionName() string {
@@ -787,7 +787,7 @@ func (c *deviceConfig) DeviceKernelHeaderDirs() []string {
 }
 
 func (c *deviceConfig) SpecificCameraParametersLibrary() string {
-	return String(c.config.productVariables.Ion.Specific_camera_parameter_library)
+	return String(c.config.productVariables.DarkMagic.Specific_camera_parameter_library)
 }
 
 func (c *deviceConfig) NativeCoverageEnabled() bool {
